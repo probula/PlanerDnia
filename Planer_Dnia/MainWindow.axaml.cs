@@ -14,4 +14,9 @@ public partial class MainWindow : Window
     {
         throw new System.NotImplementedException();
     }
+
+    private void submitTwo(object? sender, RoutedEventArgs e)
+    {
+        throw new System.NotImplementedException();
+    }
 }

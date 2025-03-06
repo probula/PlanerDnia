@@ -7,8 +7,8 @@
         Title="Planer_Dnia">
     
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
-                <TextBox Width="100" Height="30" Watermark="Dodaj zadanie: " x:Name="textBox1"/>
-                <ComboBox Width="100" Margin="10" x:Name="comboBox1">
+                <TextBox Width="100" Height="30" Watermark="Dodaj zadanie: " x:Name="textBoxOne"/>
+                <ComboBox Width="100" Margin="10" x:Name="comboBoxOne">
                         <ComboBoxItem Content="Praca"/>
                         <ComboBoxItem Content="Relaks"/>
                         <ComboBoxItem Content="Zakupy"/>
@@ -20,7 +20,6 @@
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
                         
                         <Grid.ColumnDefinitions>
@@ -28,7 +27,19 @@
                                 <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
                         
-                    
+                        <TextBlock Grid.Row="0" Grid.Column="0" Margin="10" Text="nazwa zadania"/>
+                        
+                        <TextBlock Grid.Row="1" Grid.Column="0" Margin="10" Text="edycja kategorii"/>
+                        <ComboBox Grid.Column="1" Grid.Row="1">
+                                <ComboBoxItem Content="Praca"/>
+                                <ComboBoxItem Content="Relaks"/>
+                                <ComboBoxItem Content="Zakupy"/>
+                        </ComboBox>
+                        
+                        <CheckBox Grid.Row="3" Grid.Column="0" x:Name="checkBoxOne" Content="ukończone"></CheckBox>
+                        
                 </Grid>
+                <Button x:Name="buttonOne" Content="Usuń zadanie" HorizontalAlignment="Center" Click="submitTwo"/>
+                
         </StackPanel>
 </Window>

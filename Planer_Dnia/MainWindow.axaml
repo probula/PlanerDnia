@@ -5,5 +5,30 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Planer_Dnia.MainWindow"
         Title="Planer_Dnia">
-    Welcome to Avalonia!
+    
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                <TextBox Width="100" Height="30" Watermark="Dodaj zadanie: " x:Name="textBox1"/>
+                <ComboBox Width="100" Margin="10" x:Name="comboBox1">
+                        <ComboBoxItem Content="Praca"/>
+                        <ComboBoxItem Content="Relaks"/>
+                        <ComboBoxItem Content="Zakupy"/>
+                </ComboBox>
+                <Button x:Name="button1" Content="Dodaj" HorizontalAlignment="Center" Click="submitOne"/>
+                
+                <Grid>
+                        <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        
+                        <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        
+                    
+                </Grid>
+        </StackPanel>
 </Window>

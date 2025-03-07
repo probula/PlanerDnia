@@ -16,15 +16,19 @@ public partial class MainWindow : Window
         var comboBoxValue = (comboBoxOne.SelectedItem as ComboBoxItem)?.Content?.ToString() ?? "No selection";
         showTB.Text=comboBoxValue;
     }
-
-    private void submitTwo(object? sender, RoutedEventArgs e)
-    {
-        throw new System.NotImplementedException();
-    }
-
+    
     private void edit(object? sender, RoutedEventArgs e)
     {
         var comboBoxValueTwo = (comboBoxTwo.SelectedItem as ComboBoxItem)?.Content?.ToString() ?? "No selection";
         showTB.Text=comboBoxValueTwo;
+    }
+    
+    private void submitTwo(object? sender, RoutedEventArgs e)
+    {
+        tbOne.Text = "";
+        textBoxOne.Text = "";
+        showTB.Text = "";
+        comboBoxOne.SelectedIndex = -1;
+        comboBoxTwo.SelectedIndex = -1;
     }
 }

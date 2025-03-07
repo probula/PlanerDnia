@@ -32,7 +32,7 @@
                         <TextBlock Grid.Row="0" Grid.Column="1" Margin="10" Text="jakas nazwa" x:Name="tbOne"/>
                         
                         <TextBlock Grid.Row="1" Grid.Column="0" Margin="10" Text="edycja kategorii"/>
-                        <ComboBox Grid.Column="1" Grid.Row="1" x:Name="comboBoxTwo">
+                        <ComboBox Grid.Column="1" Grid.Row="1" x:Name="comboBoxTwo" SelectionChanged="comboBoxTwo_Zmiana">
                                 <ComboBoxItem Content="Praca"/>
                                 <ComboBoxItem Content="Relaks"/>
                                 <ComboBoxItem Content="Zakupy"/>
@@ -42,9 +42,9 @@
                         
                         <TextBlock Grid.Row="3" Grid.Column="0" x:Name="showTB"></TextBlock>
                         <CheckBox Grid.Row="3" Grid.Column="1" x:Name="checkBoxOne" Content="ukończone"></CheckBox>
-                        
                 </Grid>
                 <Button x:Name="buttonOne" Content="Usuń zadanie" HorizontalAlignment="Center" Click="submitTwo"/>
+                <TextBlock x:Name="taskList"></TextBlock>
                 
         </StackPanel>
 </Window>

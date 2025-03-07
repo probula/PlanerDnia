@@ -13,14 +13,22 @@ public partial class MainWindow : Window
     private void submitOne(object? sender, RoutedEventArgs e)
     {
         tbOne.Text = textBoxOne.Text;
-        var comboBoxValue = (comboBoxOne.SelectedItem as ComboBoxItem)?.Content?.ToString() ?? "No selection";
-        showTB.Text=comboBoxValue;
+
+        if (comboBoxOne.SelectedItem is ComboBoxItem)
+        {
+            comboBoxTwo.SelectedIndex = comboBoxOne.SelectedIndex;
+        }
+        
+        UpdateTaskList();
+        textBoxOne.Text = "";
     }
     
     private void edit(object? sender, RoutedEventArgs e)
     {
         var comboBoxValueTwo = (comboBoxTwo.SelectedItem as ComboBoxItem)?.Content?.ToString() ?? "No selection";
         showTB.Text=comboBoxValueTwo;
+        
+        UpdateTaskList();
     }
     
     private void submitTwo(object? sender, RoutedEventArgs e)
@@ -31,4 +39,19 @@ public partial class MainWindow : Window
         comboBoxOne.SelectedIndex = -1;
         comboBoxTwo.SelectedIndex = -1;
     }
+
+    private void comboBoxTwo_Zmiana(object? sender, SelectionChangedEventArgs e)
+    {
+        UpdateTaskList();
+    }
+
+    private void UpdateTaskList()
+    {
+        string taskName = tbOne.Text;
+        string category = (comboBoxTwo.SelectedItem as ComboBoxItem)?.Content.ToString() ?? "Brak kategorii";
+        string status = checkBoxOne.IsChecked == true ? "Ukończone" : "Nieukończone";
+
+        taskList.Text += $"{taskName} - {category} - {status}\n";
+    }
+
 }

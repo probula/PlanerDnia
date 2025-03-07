@@ -24,6 +24,7 @@ public partial class MainWindow : Window
 
     private void edit(object? sender, RoutedEventArgs e)
     {
-        throw new System.NotImplementedException();
+        var comboBoxValueTwo = (comboBoxTwo.SelectedItem as ComboBoxItem)?.Content?.ToString() ?? "No selection";
+        showTB.Text=comboBoxValueTwo;
     }
 }

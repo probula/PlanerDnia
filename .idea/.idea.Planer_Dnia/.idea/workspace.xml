@@ -7,10 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af15a7ad-699f-482f-ad31-03e40a6b06e6" name="Changes" comment="button usuń zadanie now deletes entered data">
+    <list default="true" id="af15a7ad-699f-482f-ad31-03e40a6b06e6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Planer_Dnia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Planer_Dnia/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Planer_Dnia/MainWindow.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/Planer_Dnia/MainWindow.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Planer_Dnia/MainWindow.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Planer_Dnia/MainWindow.axaml.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,20 +43,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.Planer_Dnia.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.Planer_Dnia.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Planer_Dnia" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -90,7 +88,7 @@
       <workItem from="1741279479227" duration="62000" />
       <workItem from="1741279554561" duration="57000" />
       <workItem from="1741294038898" duration="1729000" />
-      <workItem from="1741384038356" duration="3700000" />
+      <workItem from="1741384038356" duration="4052000" />
     </task>
     <task id="LOCAL-00001" summary="created project">
       <option name="closed" value="true" />
@@ -140,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741386805484</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added list of tasks">
+      <option name="closed" value="true" />
+      <created>1741388063788</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1741388063788</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +162,7 @@
     <MESSAGE value="created ability to add task" />
     <MESSAGE value="added ability to edit task category" />
     <MESSAGE value="button usuń zadanie now deletes entered data" />
-    <option name="LAST_COMMIT_MESSAGE" value="button usuń zadanie now deletes entered data" />
+    <MESSAGE value="added list of tasks" />
+    <option name="LAST_COMMIT_MESSAGE" value="added list of tasks" />
   </component>
 </project>

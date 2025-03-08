@@ -29,7 +29,7 @@
                         </Grid.ColumnDefinitions>
                         
                         <TextBlock Grid.Row="0" Grid.Column="0" Margin="10" Text="nazwa zadania"/>
-                        <TextBlock Grid.Row="0" Grid.Column="1" Margin="10" Text="jakas nazwa" x:Name="tbOne"/>
+                        <TextBlock Grid.Row="0" Grid.Column="1" Margin="10" x:Name="tbOne"/>
                         
                         <TextBlock Grid.Row="1" Grid.Column="0" Margin="10" Text="edycja kategorii"/>
                         <ComboBox Grid.Column="1" Grid.Row="1" x:Name="comboBoxTwo" SelectionChanged="comboBoxTwo_Zmiana">
@@ -37,8 +37,6 @@
                                 <ComboBoxItem Content="Relaks"/>
                                 <ComboBoxItem Content="Zakupy"/>
                         </ComboBox>
-                        
-                        <Button Grid.Row="1" Grid.Column="2" Content="Zmień" x:Name="buttonTwo" Click="edit"></Button>
                         
                         <TextBlock Grid.Row="3" Grid.Column="0" x:Name="showTB"></TextBlock>
                         <CheckBox Grid.Row="3" Grid.Column="1" x:Name="checkBoxOne" Content="ukończone"></CheckBox>

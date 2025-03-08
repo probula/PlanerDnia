@@ -49,4 +49,8 @@ public partial class MainWindow : Window
             
     }
 
+    private void cb_checked(object? sender, RoutedEventArgs e)
+    {
+        UpdateTaskList();
+    }
 }

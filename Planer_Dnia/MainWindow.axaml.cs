@@ -21,8 +21,8 @@ public partial class MainWindow : Window
         
         textBoxOne.Text = "";
     }
-    
-    
+
+
     private void submitTwo(object? sender, RoutedEventArgs e)
     {
         tbOne.Text = "";
@@ -30,6 +30,8 @@ public partial class MainWindow : Window
         showTB.Text = "";
         comboBoxOne.SelectedIndex = -1;
         comboBoxTwo.SelectedIndex = -1;
+        checkBoxOne.IsChecked = false;
+        taskList.Text = "";
     }
 
     private void comboBoxTwo_Zmiana(object? sender, SelectionChangedEventArgs e)

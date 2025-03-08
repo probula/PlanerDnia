@@ -7,7 +7,7 @@
         Title="Planer_Dnia">
     
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
-                <TextBox Width="100" Height="30" Watermark="Dodaj zadanie: " x:Name="textBoxOne"/>
+                <TextBox Width="200" Height="30" Watermark="Dodaj zadanie: " x:Name="textBoxOne"/>
                 <ComboBox Width="100" Margin="10" x:Name="comboBoxOne" HorizontalAlignment="Center">
                         <ComboBoxItem Content="Praca"/>
                         <ComboBoxItem Content="Relaks"/>
@@ -32,7 +32,7 @@
                         <TextBlock Grid.Row="0" Grid.Column="1" Margin="10" x:Name="tbOne"/>
                         
                         <TextBlock Grid.Row="1" Grid.Column="0" Margin="10" Text="edycja kategorii"/>
-                        <ComboBox Grid.Column="1" Grid.Row="1" x:Name="comboBoxTwo" SelectionChanged="comboBoxTwo_Zmiana">
+                        <ComboBox Grid.Column="1" Grid.Row="1" x:Name="comboBoxTwo" SelectionChanged="comboBoxTwo_Zmiana" Width="100">
                                 <ComboBoxItem Content="Praca"/>
                                 <ComboBoxItem Content="Relaks"/>
                                 <ComboBoxItem Content="Zakupy"/>

@@ -42,7 +42,7 @@
                         <CheckBox Grid.Row="3" Grid.Column="1" x:Name="checkBoxOne" Content="ukończone" Checked="cb_checked"/>
                 </Grid>
                 <Button x:Name="buttonOne" Content="Usuń zadania" HorizontalAlignment="Center" Click="submitTwo"/>
-                <TextBlock x:Name="taskList"/>
+                <ListBox x:Name="taskList" Width="300" Height="200" Margin="10" SelectionMode="Single"/>
                 
         </StackPanel>
 </Window>

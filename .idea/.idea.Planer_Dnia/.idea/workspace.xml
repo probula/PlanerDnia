@@ -7,8 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af15a7ad-699f-482f-ad31-03e40a6b06e6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Planer_Dnia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Planer_Dnia/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="af15a7ad-699f-482f-ad31-03e40a6b06e6" name="Changes" comment="app now deletes last task not all">
+      <change beforePath="$PROJECT_DIR$/Planer_Dnia/MainWindow.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/Planer_Dnia/MainWindow.axaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Planer_Dnia/MainWindow.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Planer_Dnia/MainWindow.axaml.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +92,7 @@
       <workItem from="1741384038356" duration="4052000" />
       <workItem from="1741421618581" duration="1475000" />
       <workItem from="1741645884139" duration="76000" />
-      <workItem from="1742481693000" duration="2216000" />
+      <workItem from="1742481693000" duration="2529000" />
     </task>
     <task id="LOCAL-00001" summary="created project">
       <option name="closed" value="true" />
@@ -182,7 +182,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741423080421</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="app now deletes last task not all">
+      <option name="closed" value="true" />
+      <created>1742484027609</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1742484027609</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,6 +211,7 @@
     <MESSAGE value="improved functionality of &quot;usuń zadanie&quot; button" />
     <MESSAGE value="checkbox is dynamically updated" />
     <MESSAGE value="changed width of the input fields" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed width of the input fields" />
+    <MESSAGE value="app now deletes last task not all" />
+    <option name="LAST_COMMIT_MESSAGE" value="app now deletes last task not all" />
   </component>
 </project>

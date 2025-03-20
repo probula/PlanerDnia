@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 
@@ -6,56 +8,70 @@ namespace Planer_Dnia;
 
 public partial class MainWindow : Window
 {
-    private List<string> tasks = new List<string>();
     public MainWindow()
     {
         InitializeComponent();
     }
 
+    public class Task
+    {
+        public string Name { get; set; }
+        public string Category { get; set; }
+        public string Status { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Name} - {Category} - {Status}";
+        }
+    };
+    
+    ObservableCollection<Task> tasks = new ObservableCollection<Task>();
+
     private void submitOne(object? sender, RoutedEventArgs e)
     {
-        string taskName = textBoxOne.Text;
-
-        if (!string.IsNullOrWhiteSpace(taskName))
+        var task = new Task()
         {
-            tbOne.Text = taskName;
-            string category = (comboBoxOne.SelectedItem as ComboBoxItem)?.Content.ToString() ?? "Brak kategorii";
-            string status = checkBoxOne.IsChecked == true ? "Ukończone" : "Nieukończone";
-            
-            string taskEntry = $"{taskName} - {category} - {status}";
-            tasks.Add(taskEntry);
-            
-            UpdateTaskList();
-        }
+            Name = textBoxOne.Text,
+            Category = (comboBoxOne.SelectedItem as ComboBoxItem)?.Content?.ToString(),
+            Status = checkBoxOne.IsChecked == true ? "Ukończone" : "Nieukończone"
+        };
+
+        tasks.Add(task);
+        tbOne.Text = task.Name;
+        UpdateTaskList();
         textBoxOne.Text = "";
+        comboBoxOne.SelectedIndex = -1;
+        checkBoxOne.IsChecked = false;
     }
 
 
     private void submitTwo(object? sender, RoutedEventArgs e)
     {
-        if (tasks.Count > 0)
-        {
-            tasks.RemoveAt(tasks.Count - 1);
-            UpdateTaskList();
-        }
-    }
-
-    private void comboBoxTwo_Zmiana(object? sender, SelectionChangedEventArgs e)
-    {
+        tasks.Clear();
         UpdateTaskList();
+        tbOne.Text = "";
     }
 
     private void UpdateTaskList()
     {
-        taskList.Text = string.Join("\n", tasks);
-            
+        taskList.ItemsSource = null;
+        taskList.ItemsSource = tasks;
+    }
+    
+    private void comboBoxTwo_Zmiana(object? sender, SelectionChangedEventArgs e)
+    {
+        if (taskList.SelectedItem is Task selectedTask)
+        {
+            selectedTask.Category = (comboBoxTwo.SelectedItem as ComboBoxItem)?.Content?.ToString();
+            UpdateTaskList();
+        }
     }
 
     private void cb_checked(object? sender, RoutedEventArgs e)
     {
-        if (tasks.Count > 0)
+        if (taskList.SelectedItem is Task selectedTask)
         {
-            tasks[tasks.Count - 1] = tasks[tasks.Count - 1].Replace("Nieukończone", "Ukończone");
+            selectedTask.Status = checkBoxOne.IsChecked == true ? "Ukończone" : "Nieukończone";
             UpdateTaskList();
         }
     }

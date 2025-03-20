@@ -9,6 +9,7 @@
   <component name="ChangeListManager">
     <list default="true" id="af15a7ad-699f-482f-ad31-03e40a6b06e6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Planer_Dnia/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Planer_Dnia/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Planer_Dnia/MainWindow.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Planer_Dnia/MainWindow.axaml.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +90,9 @@
       <workItem from="1741279554561" duration="57000" />
       <workItem from="1741294038898" duration="1729000" />
       <workItem from="1741384038356" duration="4052000" />
+      <workItem from="1741421618581" duration="1475000" />
+      <workItem from="1741645884139" duration="76000" />
+      <workItem from="1742481693000" duration="2216000" />
     </task>
     <task id="LOCAL-00001" summary="created project">
       <option name="closed" value="true" />
@@ -146,7 +150,39 @@
       <option name="project" value="LOCAL" />
       <updated>1741388063788</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fixed bug causing creating two tasks after first add">
+      <option name="closed" value="true" />
+      <created>1741422240378</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1741422240378</updated>
+    </task>
+    <task id="LOCAL-00009" summary="improved functionality of &quot;usuń zadanie&quot; button">
+      <option name="closed" value="true" />
+      <created>1741422445857</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1741422445857</updated>
+    </task>
+    <task id="LOCAL-00010" summary="checkbox is dynamically updated">
+      <option name="closed" value="true" />
+      <created>1741422806503</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1741422806503</updated>
+    </task>
+    <task id="LOCAL-00011" summary="changed width of the input fields">
+      <option name="closed" value="true" />
+      <created>1741423080421</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1741423080421</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +199,10 @@
     <MESSAGE value="added ability to edit task category" />
     <MESSAGE value="button usuń zadanie now deletes entered data" />
     <MESSAGE value="added list of tasks" />
-    <option name="LAST_COMMIT_MESSAGE" value="added list of tasks" />
+    <MESSAGE value="fixed bug causing creating two tasks after first add" />
+    <MESSAGE value="improved functionality of &quot;usuń zadanie&quot; button" />
+    <MESSAGE value="checkbox is dynamically updated" />
+    <MESSAGE value="changed width of the input fields" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed width of the input fields" />
   </component>
 </project>

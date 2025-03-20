@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 
@@ -5,6 +6,7 @@ namespace Planer_Dnia;
 
 public partial class MainWindow : Window
 {
+    private List<string> tasks = new List<string>();
     public MainWindow()
     {
         InitializeComponent();
@@ -12,26 +14,30 @@ public partial class MainWindow : Window
 
     private void submitOne(object? sender, RoutedEventArgs e)
     {
-        tbOne.Text = textBoxOne.Text;
+        string taskName = textBoxOne.Text;
 
-        if (comboBoxOne.SelectedItem is ComboBoxItem)
+        if (!string.IsNullOrWhiteSpace(taskName))
         {
-            comboBoxTwo.SelectedIndex = comboBoxOne.SelectedIndex;
+            tbOne.Text = taskName;
+            string category = (comboBoxOne.SelectedItem as ComboBoxItem)?.Content.ToString() ?? "Brak kategorii";
+            string status = checkBoxOne.IsChecked == true ? "Ukończone" : "Nieukończone";
+            
+            string taskEntry = $"{taskName} - {category} - {status}";
+            tasks.Add(taskEntry);
+            
+            UpdateTaskList();
         }
-        
         textBoxOne.Text = "";
     }
 
 
     private void submitTwo(object? sender, RoutedEventArgs e)
     {
-        tbOne.Text = "";
-        textBoxOne.Text = "";
-        showTB.Text = "";
-        comboBoxOne.SelectedIndex = -1;
-        comboBoxTwo.SelectedIndex = -1;
-        checkBoxOne.IsChecked = false;
-        taskList.Text = "";
+        if (tasks.Count > 0)
+        {
+            tasks.RemoveAt(tasks.Count - 1);
+            UpdateTaskList();
+        }
     }
 
     private void comboBoxTwo_Zmiana(object? sender, SelectionChangedEventArgs e)
@@ -41,16 +47,16 @@ public partial class MainWindow : Window
 
     private void UpdateTaskList()
     {
-        string taskName = tbOne.Text;
-        string category = (comboBoxTwo.SelectedItem as ComboBoxItem)?.Content.ToString() ?? "Brak kategorii";
-        string status = checkBoxOne.IsChecked == true ? "Ukończone" : "Nieukończone";
-        
-        taskList.Text += $"{taskName} - {category} - {status}\n";
+        taskList.Text = string.Join("\n", tasks);
             
     }
 
     private void cb_checked(object? sender, RoutedEventArgs e)
     {
-        UpdateTaskList();
+        if (tasks.Count > 0)
+        {
+            tasks[tasks.Count - 1] = tasks[tasks.Count - 1].Replace("Nieukończone", "Ukończone");
+            UpdateTaskList();
+        }
     }
 }

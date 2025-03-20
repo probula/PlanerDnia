@@ -42,7 +42,16 @@ public partial class MainWindow : Window
 
     private void comboBoxTwo_Zmiana(object? sender, SelectionChangedEventArgs e)
     {
-        UpdateTaskList();
+        if (tasks.Count > 0)
+        {
+            string newCategory = (comboBoxTwo.SelectedItem as ComboBoxItem)?.Content.ToString() ?? "Brak kategorii";
+            string[] taskParts = tasks[tasks.Count - 1].Split(" - ");
+            if (taskParts.Length == 3)
+            {
+                tasks[tasks.Count - 1] = $"{taskParts[0]} - {newCategory} - {taskParts[2]}";
+                UpdateTaskList();
+            }
+        }
     }
 
     private void UpdateTaskList()
@@ -56,6 +65,14 @@ public partial class MainWindow : Window
         if (tasks.Count > 0)
         {
             tasks[tasks.Count - 1] = tasks[tasks.Count - 1].Replace("Nieukończone", "Ukończone");
+            UpdateTaskList();
+        }
+    }
+    private void cb_unchecked(object? sender, RoutedEventArgs e)
+    {
+        if (tasks.Count > 0)
+        {
+            tasks[tasks.Count - 1] = tasks[tasks.Count - 1].Replace("Ukończone", "Nieukończone");
             UpdateTaskList();
         }
     }
